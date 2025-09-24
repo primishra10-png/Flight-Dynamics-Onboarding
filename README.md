@@ -1,10 +1,7 @@
 # 3-DOF Rocket Simulation
 MATLAB simulation of a rocket flight for the PSP flight dynamics team 
 ## Overview
-This simulation models the flight of a rocket in 2D space, accounting 
-for thrust, drag, and gravitational forces, but not wind. The program calculates the 
-complete trajectory from launch to impact and provides visualizations of the 
-flight path, velocities, and forces over time.
+This simulation models the flight of a rocket in 2D space, accounting for thrust, drag, and gravitational forces, but not wind. The program calculates the complete trajectory from launch to impact and provides visualizations of the flight path, velocities, and forces over time.
 ## Features
 - Physics: Implements thrust, drag, and gravitational forces
 - Numerical Integration: Uses Euler method with second-order position
@@ -18,10 +15,7 @@ correction (goes to acceleration term)
 - Mass: 40 kg
 - Rocket Diameter: 0.1 m
 - Drag Coefficient: 0.75
-- Launch Angle: 85° from horizontal (I chose this angle because no angle
-was specified in the onboarding assignment, and 85 degrees is almost
-vertical, so the flight time can be longer, but the rocket is still angled 
-enough to show some interesting physics)
+- Launch Angle: 85° from horizontal (I chose this angle because no angle was specified in the onboarding assignment, and 85 degrees is almost vertical, so the flight time can be longer, but the rocket is still angled enough to show some interesting physics)
 - Time Step: 0.01 seconds (just to get lots of data points)
 ### Physical Constants
 - Gravity: 9.81 m/s² (this is standard)
@@ -60,17 +54,15 @@ i-1 means the previous data point
 ## Customization
 ### Modifying Parameters
 To change simulation parameters, edit the values in the "Given Parameters" section:
+```matlab
 thrust = 2000;        % Thrust force in Newtons
 mass = 40;           % Rocket mass in kg
 burnTime = 5;        % Burn duration in seconds
 diameter = 0.1;      % Rocket diameter in meters
 dragCoeff = 0.75;    % Drag coefficient (dimensionless)
-launchAngle = 85;    % Launch angle in degrees (it would be cool to play
-around with the angle)
-I want to add that to the rotating code that was provided, I changed the
-dimensions of the rocket because given the scales of my plots, it didn't
-make sense for the rocket to be so small because I couldn't see it, so I
-made it a lot bigger)
+launchAngle = 85;    % Launch angle in degrees (it would be cool to play around with the angle)
+I want to add that to the rotating code that was provided, I changed the dimensions of the rocket because given the scales of my plots, it didn't make sense for the rocket to be so small because I couldn't see it, so I made it a lot bigger)
+```
 ## Added Key Features 
 ### Automatic Ground Detection
 The simulation automatically terminates when the rocket hits the ground (y ≤ 0), ensuring realistic flight times.
@@ -108,8 +100,7 @@ Potential improvements could include:
 - Built-in functions: `polyshape`, `rotate`, `translate`
 ## Troubleshooting
 ### Common Issues
-- Earlier, the animation was not visible, I fixed this by increasing the 
-rocket size parameters `w` and `h` in the given code.
+- Earlier, the animation was not visible, I fixed this by increasing the rocket size parameters `w` and `h` in the given code.
 - Simulation runs too long: Increase `dt`%
 - Memory issues: Reduce simulation resolution or duration
 ### Performance Tips
