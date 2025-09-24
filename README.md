@@ -61,8 +61,8 @@ burnTime = 5;        % Burn duration in seconds
 diameter = 0.1;      % Rocket diameter in meters
 dragCoeff = 0.75;    % Drag coefficient (dimensionless)
 launchAngle = 85;    % Launch angle in degrees (it would be cool to play around with the angle)
-I want to add that to the rotating code that was provided, I changed the dimensions of the rocket because given the scales of my plots, it didn't make sense for the rocket to be so small because I couldn't see it, so I made it a lot bigger)
 ```
+I chose the launch angle to be 85 degrees because there was no launch angle given in the onboarding assignment. I chose 85 degrees so that the rocket was launched almost vertically, but still angled enough to show some interesting physics
 ## Added Key Features 
 ### Automatic Ground Detection
 The simulation automatically terminates when the rocket hits the ground (y ≤ 0), ensuring realistic flight times.
